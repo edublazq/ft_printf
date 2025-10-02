@@ -9,7 +9,7 @@ ft_printf_utils.c
 OBJS = $(SRCS:.c=.o)
 
 .c.o:
-	@$(CC) $(CFLAGS) -c $< -o ${<:.c=.o}
+	@$(CC) $(CFLAGS) -c $< -o ${<:.c=.o} -L./Libft -lft
 
 $(NAME): $(LIBFT) $(OBJS)
 	@echo "Compiling ft_printf..."
@@ -23,7 +23,7 @@ all: $(NAME)
 
 clean:
 	@echo "🗑️ Removing objs"
-	@$(RM) $(OBJS) $(BONUS_OBJS)
+	@$(RM) $(OBJS)
 	@$(MAKE) -C $(LIBFT_DIR) clean
 
 fclean: clean
