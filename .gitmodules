@@ -1,0 +1,3 @@
+[submodule "Libft2"]
+	path = Libft2
+	url = git@github.com:edublazq/42-Libft.git
