@@ -12,6 +12,6 @@ int	main(void)
 	ft_printf("Entero sin signo: %u\n", 42);
 	ft_printf("Hex min: %x\n", 255);
 	ft_printf("Hex may: %X\n", 255);
-	ft_printf("Porcentaje: %");
+	printf("Porcentaje: %");
 
 }
