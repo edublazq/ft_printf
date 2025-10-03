@@ -59,6 +59,11 @@ void	ft_print_ptr(void *ptr)
 {
 	uintptr_t	address;
 
+	if (ptr == NULL)
+	{
+		ft_printf("0x0");
+		return ;
+	}
 	address = (uintptr_t)ptr;
 	ft_putstr_fd("0x", 1);
 	if (!address)
