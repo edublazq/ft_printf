@@ -23,9 +23,22 @@ int	ft_format_extra(va_list vargs, char *c, int i)
 			return (i + 3);
 		}
 		else
-			return(ft_format(vargs, c, i) + 1);
+			ft_format(vargs, c , i);
 	}
-	return (i + 2);
+	else if(*c == ' ')
+	{
+		c += 1;
+		if (*c == 'd' || *c == 'i')
+		{
+			ft_print_space(va_arg(vargs, int));
+			return (i + 3);
+		}
+		else
+			ft_format(vargs, c, i);
+	}
+	else
+		return (-1);
+	return (i + 1);
 }
 
 int	ft_format(va_list vargs, char *c, int i)

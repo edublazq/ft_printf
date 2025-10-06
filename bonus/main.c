@@ -14,6 +14,6 @@
 
 int	main(void)
 {
-	printf("Mi funcion: %d\n", ft_printf("%+x soy edu\n", +42));
-	printf("printf original: %d\n", printf("%+x soy edu\n", +42));
+	ft_printf("% % % d\n", -32);
+	printf("% % % d", 32);
 }

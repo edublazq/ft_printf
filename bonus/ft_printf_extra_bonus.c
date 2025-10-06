@@ -18,3 +18,10 @@ void	ft_print_signed_number(int nbr)
 		ft_putchar_fd('+', 1);
 	ft_putnbr_fd(nbr, 1);
 }
+
+void	ft_print_space(int nbr)
+{
+	if (nbr > 0)
+		ft_putchar_fd(' ', 1);
+	ft_putnbr_fd(nbr, 1);
+}

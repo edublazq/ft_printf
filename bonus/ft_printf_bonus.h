@@ -24,5 +24,6 @@ void	ft_print_ptr_base(uintptr_t nb, char *base);
 void	ft_print_to_base(unsigned int nb, char *base);
 void	ft_print_unsigned(unsigned int nb);
 void	ft_print_signed_number(int nbr);
+void	ft_print_space(int nbr);
 
 #endif
