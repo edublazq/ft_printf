@@ -1,19 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_printf_utils_2.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bamberger12 <marvin@42.fr>                 +#+  +:+       +#+        */
+/*   By: edblazqu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/03 14:05:46 by bamberger12       #+#    #+#             */
-/*   Updated: 2025/10/03 14:05:46 by bamberger12      ###   ########.fr       */
+/*   Created: 2025/10/07 12:13:16 by edblazqu          #+#    #+#             */
+/*   Updated: 2025/10/07 12:13:17 by edblazqu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf_bonus.h"
+#include "ft_printf.h"
 
-int	main(void)
+int	ft_print_number(int nb)
 {
-	ft_printf("% % % d\n", -32);
-	printf("% % % d", 32);
+	int	digits;
+
+	digits = 0;
+	ft_putnbr_fd(nb, 1);
+	while (nb != 0)
+	{
+		nb /= 10;
+		digits++;
+	}
+	return (digits);
 }

@@ -17,9 +17,18 @@
 # include <stdarg.h>
 # include <stdint.h>
 
-void	ft_print_unsigned(unsigned int nb);
-void	ft_print_to_base(unsigned int nb, char *base);
-void	ft_print_ptr(void *ptr);
+typedef struct s_ptr
+{
+	uintptr_t	address;
+	size_t		base_length;
+	size_t		ptr_length;
+}	t_ptr;
+
+int		ft_print_string(char *str);
+int		ft_print_unsigned(unsigned int nb);
+void	ft_print_to_base(unsigned int nb, char *base, int *i);
+int		ft_print_ptr(void *ptr);
+int		ft_print_number(int nb);
 int		ft_printf(const char *str, ...);
 
 #endif
