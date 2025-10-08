@@ -37,7 +37,7 @@ int	ft_format(va_list vargs, char c)
 		return (-1);
 	if (c == 'x' || c == 'X')
 		return (i);
-	return (2);
+	return (1);
 }
 
 int	ft_printf(const char *str, ...)
@@ -71,9 +71,9 @@ int	ft_printf(const char *str, ...)
 
 int	main(void)
 {
-	printf("%d\n", ft_printf("%s", NULL));
-	printf("%d\n", ft_printf("%s", ""));
-	printf("%d\n", printf("%s", NULL));
-	printf("%d\n", printf("%s", ""));
+	printf("RETURN -> %d\n", ft_printf("MIA -> %u\n", -1));
+	printf("RETURN -> %d\n", printf("ORIGINAL -> %u\n", -1));
+	//printf("%d\n", printf("%s", NULL));
+	//printf("%d\n", printf("%s", ""));
 	return (0);
 }

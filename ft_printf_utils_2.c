@@ -20,6 +20,8 @@ int	ft_print_number(int nb)
 	ft_putnbr_fd(nb, 1);
 	if (nb < 0)
 		digits++;
+	if (nb == 0)
+		return (1);
 	while (nb != 0)
 	{
 		nb /= 10;
