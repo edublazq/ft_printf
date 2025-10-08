@@ -69,8 +69,11 @@ int	ft_printf(const char *str, ...)
 	return (count);
 }
 
-/* int	main(void)
+int	main(void)
 {
-	printf("%d\n",ft_printf("%p\n", NULL));
-	printf("%d\n",printf("%p\n", NULL));
-} */
+	printf("%d\n", ft_printf("%s", NULL));
+	printf("%d\n", ft_printf("%s", ""));
+	printf("%d\n", printf("%s", NULL));
+	printf("%d\n", printf("%s", ""));
+	return (0);
+}

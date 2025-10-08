@@ -17,13 +17,6 @@
 # include <stdarg.h>
 # include <stdint.h>
 
-typedef struct s_ptr
-{
-	uintptr_t	address;
-	size_t		base_length;
-	size_t		ptr_length;
-}	t_ptr;
-
 int		ft_print_string(char *str);
 int		ft_print_unsigned(unsigned int nb);
 void	ft_print_to_base(unsigned int nb, char *base, int *i);
