@@ -68,12 +68,3 @@ int	ft_printf(const char *str, ...)
 	va_end(vargs);
 	return (count);
 }
-
-int	main(void)
-{
-	printf("RETURN -> %d\n", ft_printf("MIA -> %u\n", -1));
-	printf("RETURN -> %d\n", printf("ORIGINAL -> %u\n", -1));
-	//printf("%d\n", printf("%s", NULL));
-	//printf("%d\n", printf("%s", ""));
-	return (0);
-}

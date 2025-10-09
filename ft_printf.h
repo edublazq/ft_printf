@@ -22,6 +22,7 @@ int		ft_print_unsigned(unsigned int nb);
 void	ft_print_to_base(unsigned int nb, char *base, int *i);
 int		ft_print_ptr(void *ptr);
 int		ft_print_number(int nb);
+void	ft_putunbr_fd(unsigned int nbr, int fd);
 int		ft_printf(const char *str, ...);
 
 #endif

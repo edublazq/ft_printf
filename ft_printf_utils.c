@@ -23,20 +23,12 @@ int	ft_print_string(char *str)
 	return (ft_strlen(str));
 }
 
-
 int	ft_print_unsigned(unsigned int nb)
 {
-
-	printf("nb:%u\n", nb);
-	unsigned int only_positive;
-
-	only_positive = nb;
-	printf("only_positive:%u\n", only_positive);
-
 	int	digits;
 
 	digits = 0;
-	ft_putnbr_fd(nb, 1);
+	ft_putunbr_fd(nb, 1);
 	if (nb == 0)
 		return (1);
 	while (nb != 0)
@@ -46,24 +38,6 @@ int	ft_print_unsigned(unsigned int nb)
 	}
 	return (digits);
 }
-
-/* int	ft_print_unsigned(unsigned int nb)
-{
-	int	digits;
-
-	digits = 0;
-	if (nb < 0)
-		nb = -nb;
-	if (nb == 0)
-		return (1);
-	ft_putnbr_fd((int)nb, 1);
-	while (nb != 0)
-	{
-		nb /= 10;
-		digits++;
-	}
-	return (digits);
-} */
 
 void	ft_print_to_base(unsigned int nb, char *base, int *i)
 {

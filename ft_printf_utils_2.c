@@ -1,12 +1,12 @@
-/**************************************************************************** */
+/* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   ft_printf_utils_2.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: edblazqu <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: bamberger12 <marvin@42.fr>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/07 12:13:16 by edblazqu          #+#    #+#             */
-/*   Updated: 2025/10/07 12:13:17 by edblazqu         ###   ########.fr       */
+/*   Created: 2025/10/09 11:58:32 by bamberger12       #+#    #+#             */
+/*   Updated: 2025/10/09 11:58:32 by bamberger12      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,4 +28,15 @@ int	ft_print_number(int nb)
 		digits++;
 	}
 	return (digits);
+}
+
+void	ft_putunbr_fd(unsigned int nbr, int fd)
+{
+	if (nbr < 10)
+		ft_putchar_fd(nbr + '0', fd);
+	else
+	{
+		ft_putnbr_fd(nbr / 10, fd);
+		ft_putnbr_fd(nbr % 10, fd);
+	}
 }
